@@ -19,7 +19,7 @@ class UsuarioServicio implements IUsuarioServicio
     public function listar(): array
     {
 
-        return $this->repository->getUsuarios();
+        return $this->repository->listar();
     }
 
    

@@ -7,7 +7,7 @@
  */
 interface IUsuarioRepository {
 
-    public function getUsuarios(): array; 
+    public function listar(): array; 
 
 
 }

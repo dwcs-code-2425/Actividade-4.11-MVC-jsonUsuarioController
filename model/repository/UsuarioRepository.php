@@ -22,13 +22,13 @@ class UsuarioRepository implements IUsuarioRepository {
         $arrayAsoc = json_decode(file_get_contents($this->filePath), true);
         foreach ($arrayAsoc as $key => $value) {
             //Se tranforma el array asociativo 
-            $nota = Util::json_decode_array_to_class($value, "Usuario");
-            $this->arrayUsers[] = $nota;
+            $usuario = Util::json_decode_array_to_class($value, "Usuario");
+            $this->arrayUsers[] = $usuario;
         }
         // echo "## $this->filePath";
     }
 
-    public function getUsuarios(): array {
+    public function listar(): array {
 
         return $this->arrayUsers;
     }
